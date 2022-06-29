@@ -1,7 +1,7 @@
 type Data = [string, string, string, string][];
 
 interface IFilter {
-  square?: string;
+  square?: number;
   street?: string;
 };
 
@@ -16,22 +16,27 @@ const data: Data = [
 ];
 
 const filters: Filters = [
-  { square: '40', street: 'Ленина' },
-  { square: '56' },
+  { square: 40, street: 'Ленина' },
+  { square: 56 },
 ];
 
 const filter = (data: Data, filters: Filters) => {
   return data.map((item) => {
+    const [square, _, __, street] = item;
+
     return filters.some((filter) => {
-      const { square, street } = filter;
+      const {
+        square: filterSquare,
+        street: filterStreet,
+      } = filter;
 
       let result = true;
 
-      if (square && item[0] != square) {
+      if (filterSquare && Number(square) != filterSquare) {
         result = false;
       }
 
-      if (street && item[3] != street) {
+      if (filterStreet && street != filterStreet) {
         result = false;
       }
 
