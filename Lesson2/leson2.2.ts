@@ -1,15 +1,20 @@
 type Data = [string, string, string, string][];
-type Filter = string | null; // для случая поиска по названию улицы
+interface IFilters {
+  square?: string;
+  street?: string;
+};
 
-const filter = (square?: Filter, street?: Filter) => {
-  const data: Data = [
-    ["36", "не приватизирован", "4 собственника", "Парковая"],
-    ["45", "приватизирован", "3 собственника", "Луговая"],
-    ["56", "не приватизирован", "1 собственник", "Луговая"],
-    ["56", "приватизирован", "5 собственников", "Ленина"],
-    ["25", "не приватизирован", "2 собственника", "Ленина"]
-  ];
+const data: Data = [
+  ["36", "не приватизирован", "4 собственника", "Парковая"],
+  ["45", "приватизирован", "3 собственника", "Луговая"],
+  ["56", "не приватизирован", "1 собственник", "Луговая"],
+  ["56", "приватизирован", "5 собственников", "Ленина"],
+  ["25", "не приватизирован", "2 собственника", "Ленина"]
+];
 
+const filter = (data: Data, filters: IFilters) => {
+  const { square, street } = filters;
+  
   return data.map((item) => {
     let result = true;
 
@@ -24,5 +29,5 @@ const filter = (square?: Filter, street?: Filter) => {
   });
 }
 
-console.log(filter( '40', 'Ленина' ));
-console.log(filter( '56' ));
+console.log(filter( data, { square: '40', street: 'Ленина' } ));
+console.log(filter( data, { square: '56' } ));

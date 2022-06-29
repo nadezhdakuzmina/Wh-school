@@ -6,7 +6,7 @@ for (let i = 0; i <= 100; i++ ) {
 
 // вторая часть задания
 
-for (let [i, ] of map) {
+for (let i of map.keys()) {
   if (!i) {
     continue;
   }
