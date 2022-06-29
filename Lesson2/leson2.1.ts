@@ -2,11 +2,6 @@ let map = new Map<number, null>();
 
 for (let i = 0; i <= 100; i++ ) {
   map.set(i, null);
-}
-
-// вторая часть задания
-
-for (let i of map.keys()) {
   if (!i) {
     continue;
   }
