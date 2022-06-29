@@ -57,6 +57,7 @@ let data: DataArray = [
 let set = new Set (data.map(element => {
   return element.dt;
 }));
+
 let map = new Map ();
 data.forEach(element => {
   if (map.has(element.dt)) {
@@ -65,7 +66,8 @@ data.forEach(element => {
     return map.set(element.dt, [res, element])
   }
   else
-  return map.set(element.dt, element
-)});
+  return map.set(element.dt, element)
+});
+
 console.log(set);
 console.log(map);
