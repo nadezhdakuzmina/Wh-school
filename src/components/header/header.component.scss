@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #D8D8D8;
+
+  &__image {
+    height: 26px;
+  }
+}

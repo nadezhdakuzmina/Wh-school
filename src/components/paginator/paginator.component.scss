@@ -1,0 +1,38 @@
+.paginator {
+  display: flex;
+  justify-content: center;
+
+  &__item{
+    background-color: #FFF;
+    border-radius: 50%;
+    border: none; 
+    outline: none;
+    width: 28px;
+    height: 28px;
+    margin-right: 2px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover{
+      background-color: #F2F2F2;
+      color: #000;
+    }
+
+    &_active {
+      background-color: #8F07CF;
+      color: #fff;
+
+      &:hover {
+        background-color: #8F07CF;
+        color: #fff;
+      }
+    }
+  }
+}

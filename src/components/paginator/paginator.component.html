@@ -1,0 +1,7 @@
+<div class="paginator margin-top_26">
+  <div class="paginator__item" *ngFor="let number of numbers">
+    <button class="paginator__item" [class.paginator__item_active]="number === selectedNumber" type="button" (click)="onSelect(number)">
+      {{number}}
+    </button>
+  </div>
+</div>

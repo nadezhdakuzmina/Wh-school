@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', SeroPro, sans-serif;;
+}
+
+.margin-top_26 {
+  margin-top: 26px;
+}
+
+.margin-top_24 {
+  margin-top: 24px;
+}
+
+.margin-top_16 {
+  margin-top: 16px;
+}
+
+.margin-top_12 {
+  margin-top: 12px;
+}
+
+.margin-left_24 {
+  margin-left: 24px;
+}
+
+.padding {
+  &_horizontal {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &_vertical {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.title {
+  color: #000000;
+  margin: 0;
+
+  &_h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
+  &_h2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  line-height: 20px;
+}

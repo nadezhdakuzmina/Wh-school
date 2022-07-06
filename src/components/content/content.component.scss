@@ -1,0 +1,27 @@
+.content {
+  &__top {
+    display: flex;
+  }
+
+  &__image {
+    height: 216px;
+    width: 238px;
+    border-radius: 16px;
+    background-color: #E2E2E2;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    &::before {
+      content: '';
+      width: 96px;
+      height: 96px;
+      background-image: url(../../assets/images/image-stub.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
